@@ -92,7 +92,7 @@ namespace yjs.DevKit.UI
                             scrollPool.ItemPrefab.Rect.anchorMax = new Vector2(0, 0);
                         }
 
-                        ViewItemCount = Mathf.FloorToInt(scrollHeight / ScrollItem.ItemSize.y);
+                        ViewItemCount = Mathf.RoundToInt(scrollHeight / ScrollItem.ItemSize.y);
                         LineRow = Mathf.FloorToInt(scrollWidth / scrollPool.ItemPrefab.ItemSize.x);
 
                         var contentWidth = LineRow * scrollPool.ItemPrefab.ItemSize.x;
@@ -170,7 +170,7 @@ namespace yjs.DevKit.UI
                             scrollPool.ItemPrefab.Rect.pivot = new Vector2(0, 1);
                         }
 
-                        ViewItemCount = Mathf.FloorToInt(scrollWidth / ScrollItem.ItemSize.x);
+                        ViewItemCount = Mathf.RoundToInt(scrollWidth / ScrollItem.ItemSize.x);
                         LineColumn = Mathf.FloorToInt(scrollHeight / scrollPool.ItemPrefab.ItemSize.y);
 
                         var contentWidth = LineColumn <= 1
